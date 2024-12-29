@@ -155,26 +155,26 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navList = document.querySelector('.nav-list');
+            const hamburger = document.querySelector('.hamburger');
+            const navList = document.querySelector('.nav-list');
 
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        navList.classList.toggle('show');
-        hamburger.classList.toggle('hide');
-    });
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navList.classList.toggle('show');
+                hamburger.classList.toggle('hide');
+            });
 
-    document.addEventListener('click', (e) => {
-        if (!navList.contains(e.target)) { 
-            navList.classList.remove('show');
-            hamburger.classList.remove('hide');
-        }
-    });
+            document.addEventListener('click', (e) => {
+                if (!navList.contains(e.target)) {
+                    navList.classList.remove('show');
+                    hamburger.classList.remove('hide');
+                }
+            });
 
-    navList.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-});
+            navList.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
 
 
     </script>
@@ -276,43 +276,46 @@
         border-bottom: 2px solid var(--main-red);
     }
 
-
     .hamburger {
         display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: var(--main-white);
         cursor: pointer;
-        position: absolute;
-        right: 2rem;
         z-index: 20;
-
     }
 
     .hamburger i {
         font-size: 2rem;
     }
 
+
     .hamburger.hide {
         display: none;
     }
 
     @media (max-width: 768px) {
-
-
         .nav-list {
             display: none;
-            align-items: flex-end;
+            align-items: center;
+            flex-direction: column;
             position: fixed;
-            top: 1em;
-            right: 0;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: #000;
-            padding: 0.5rem;
+            padding: 1rem;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
+            z-index: 100;
         }
 
         .nav-list.show {
             display: flex;
         }
+
 
         .nav-list a {
             padding: 0.5rem 1rem;
@@ -320,18 +323,21 @@
 
         .hamburger {
             display: block;
-
         }
-
-
     }
-
 
 
     /* nav bar */
 
-
     /*welcome section*/
+
+    @media (max-width: 768px) {
+
+        .welcome-section {
+            margin-top: 6em;
+        }
+    }
+
 
     .welcome-section {
         font-size: 0.8rem;
