@@ -83,7 +83,7 @@
             </a>
 
 
-            <a href="" class="project project-tile" target="_blank">
+            <a href="https://joyz-alt.github.io/product-landing-page-/" class="project project-tile" target="_blank">
 
                 <img class="project-img" src="images\Original-trombones.png">
 
@@ -155,13 +155,28 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const navList = document.querySelector('.nav-list');
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
 
-            hamburger.addEventListener('click', () => {
-                navList.classList.toggle('show');
-            });
-        });
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        navList.classList.toggle('show');
+        hamburger.classList.toggle('hide');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navList.contains(e.target)) { 
+            navList.classList.remove('show');
+            hamburger.classList.remove('hide');
+        }
+    });
+
+    navList.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
+
     </script>
 
 
@@ -276,18 +291,21 @@
         font-size: 2rem;
     }
 
+    .hamburger.hide {
+        display: none;
+    }
+
     @media (max-width: 768px) {
-        .nav {}
+
 
         .nav-list {
             display: none;
-            flex-direction: column;
             align-items: flex-end;
             position: fixed;
-            top: 0;
-            right: 1rem;
+            top: 1em;
+            right: 0;
             background-color: #000;
-            padding: 1rem;
+            padding: 0.5rem;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
         }
@@ -305,8 +323,8 @@
 
         }
 
-    }
 
+    }
 
 
 
@@ -340,14 +358,15 @@
         text-align: center;
         justify-content: flex-start;
         align-items: center;
-        width: 90%;
+        width: auto;
         max-width: 400px;
-        height:fit-content;
+        height: auto;
         margin: 1rem auto;
         padding: 1.5rem;
         border-radius: 20px;
         /*  background-image: linear-gradient(#ffffff, #dcdcdc);*/
         background-image: linear-gradient(#c8b6b6 0%, #968888 50%, #c8b6b6 100%);
+        word-wrap: break-word;
     }
 
 
@@ -374,6 +393,7 @@
         text-align: left;
     }
 
+
     /*welcome section*/
 
 
@@ -382,6 +402,7 @@
         text-align: center;
         padding: 4rem;
         background-image: linear-gradient(#000 0%, #897d7d 50%, #000 100%);
+        scroll-margin-top: 50px;
     }
 
     .project-section-title {
@@ -417,6 +438,11 @@
         border-radius: 50px;
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
     }
 
     .project img {
@@ -474,8 +500,8 @@
         background-image: linear-gradient(#c8b6b6 0%, #968888 50%, #c8b6b6 100%);
         border-radius: 50px;
         width: 90%;
-        height: 20em;
-        padding:2em;
+        height: auto;
+        padding: 2em;
     }
 
 
@@ -503,6 +529,11 @@
         text-shadow: 2px 2px 1px #1f1f1f;
         transition: transform 0.3s ease-out;
         color: var(--main-white);
+    }
+
+    .contact-button:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
     }
 
     .btn {
@@ -537,21 +568,26 @@
 
     /*footer*/
 
-    footer{
+    footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         width: 100%;
         height: 10vh;
         background: linear-gradient(90deg, #000000, #333333);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        padding: 0.5rem 1rem;    }
+        padding: 0.5rem 1rem;
+    }
 
-    .footer-btn{
-        font-size:2rem;
-        color:var(--main-white);
-        
+    .footer-btn {
+        font-size: 2rem;
+        color: var(--main-white);
+    }
+
+    .footer-btn:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
     }
 
 
