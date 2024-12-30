@@ -60,14 +60,14 @@
                 <li>Team Collaboration</li>
                 <li>Adaptability</li>
                 <li>Multilingual: English (Native), French (Native), Spanish (B1), Portuguese (A2)</li>
-
             </ul>
         </div>
     </section>
 
 
     <section id="projects-section" class="projects-section">
-        <div class="project-section-title">
+
+        <div class="project-section-container">
             <h2><i class="fas fa-project-diagram"></i> These are some of my projects, enjoy</h2>
         </div>
 
@@ -87,42 +87,38 @@
 
                 <img class="project-img" src="images\Original-trombones.png">
 
-                <p class="project-title">Product landing page </p>
+                <p class="project-title">Product Landing Page</p>
             </a>
 
 
             <a href="" class="project project-tile" target="_blank">
 
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYmB85xc0C1z5rFiszgkeHWohtfeY_7n0z7Tz24nF9GfUJ3E2Lnf3Sz2TU7tvy2B1XDPyEJKgCqrhwSwA4nrfERz-LQnKPyui7b6hzWunxCfYwV8tgauoQVlH6fdA4tdeV4rKEFsf609RmDiD02TsdiaCQ_4a1K2iG6NkhtodRPdOikxtXsIqPsLZm3g7Z/s16000/Palindrome%20Checker%20with%20JavaScript.jpeg=w801-h427-p-k-no-nu"
-                    class="project-img">
+                <img src="images\Technical Documentation Page.png" class="project-img">
 
-                <p class="project-title">Technical documentation page </p>
+                <p class="project-title">Documentation Page </p>
             </a>
 
 
             <a href="" class="project project-tile" target="_blank">
 
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYmB85xc0C1z5rFiszgkeHWohtfeY_7n0z7Tz24nF9GfUJ3E2Lnf3Sz2TU7tvy2B1XDPyEJKgCqrhwSwA4nrfERz-LQnKPyui7b6hzWunxCfYwV8tgauoQVlH6fdA4tdeV4rKEFsf609RmDiD02TsdiaCQ_4a1K2iG6NkhtodRPdOikxtXsIqPsLZm3g7Z/s16000/Palindrome%20Checker%20with%20JavaScript.jpeg=w801-h427-p-k-no-nu"
-                    class="project-img">
+                <img src="images\Technical Documentation Page.png" class="project-img">
 
-                <p class="project-title">Tribute page </p>
+                <p class="project-title">Tribute Page </p>
             </a>
 
 
             <a href="" class="project project-tile" target="_blank">
 
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYmB85xc0C1z5rFiszgkeHWohtfeY_7n0z7Tz24nF9GfUJ3E2Lnf3Sz2TU7tvy2B1XDPyEJKgCqrhwSwA4nrfERz-LQnKPyui7b6hzWunxCfYwV8tgauoQVlH6fdA4tdeV4rKEFsf609RmDiD02TsdiaCQ_4a1K2iG6NkhtodRPdOikxtXsIqPsLZm3g7Z/s16000/Palindrome%20Checker%20with%20JavaScript.jpeg=w801-h427-p-k-no-nu"
-                    class="project-img">
+                <img src="images\Technical Documentation Page.png" class="project-img">
 
-                <p class="project-title">Survey form </p>
+                <p class="project-title">Survey Form </p>
             </a>
 
             <a href="" class="project project-tile" target="_blank">
 
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYmB85xc0C1z5rFiszgkeHWohtfeY_7n0z7Tz24nF9GfUJ3E2Lnf3Sz2TU7tvy2B1XDPyEJKgCqrhwSwA4nrfERz-LQnKPyui7b6hzWunxCfYwV8tgauoQVlH6fdA4tdeV4rKEFsf609RmDiD02TsdiaCQ_4a1K2iG6NkhtodRPdOikxtXsIqPsLZm3g7Z/s16000/Palindrome%20Checker%20with%20JavaScript.jpeg=w801-h427-p-k-no-nu"
-                    class="project-img">
+                <img src="images\Technical Documentation Page.png" class="project-img">
 
-                <p class="project-title">Survey form </p>
+                <p class="project-title">Survey Form </p>
             </a>
         </div>
     </section>
@@ -150,9 +146,7 @@
 
         </div>
     </section>
-
-    <footer><a href="#" class="footer-btn">Back to top</a></footer>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
@@ -334,10 +328,9 @@
     @media (max-width: 768px) {
 
         .welcome-section {
-            margin-top: 6em;
+            margin-top: 4em;
         }
     }
-
 
     .welcome-section {
         font-size: 0.8rem;
@@ -357,6 +350,62 @@
         width: 100%;
     }
 
+    /* Tiles styling for mobile devices */
+    @media (max-width: 768px) {
+        .tile {
+            width: 90%;
+            /* Adjust to take most of the screen width */
+            margin: 1rem auto;
+            /* Center the tiles with consistent spacing */
+            padding: 1rem;
+            /* Reduce padding for smaller screens */
+            border-radius: 15px;
+            /* Softer border radius */
+        }
+
+        .tile h2 {
+            font-size: 2rem;
+            /* Slightly smaller header font size */
+            margin-bottom: 0.5rem;
+            /* Reduce spacing below header */
+        }
+
+        .tile li {
+            font-size: 1rem;
+            /* Adjust font size for better readability */
+            line-height: 1.6;
+            /* Slightly tighter line spacing */
+            text-align: center;
+            /* Keep text aligned to the left */
+        }
+    }
+
+    @media (max-width: 425px) {
+        .tile {
+            width: 100%;
+            /* Maximize use of screen width */
+            padding: 0.8rem;
+            /* Further reduce padding for very small screens */
+            border-radius: 10px;
+            /* Smaller border radius for compact look */
+        }
+
+        .tile h2 {
+            font-size: 1.8rem;
+            /* Smaller font size for headers */
+            margin-bottom: 0.3rem;
+        }
+
+        .tile li {
+            font-size: 0.9rem;
+            /* Reduce text size further for small devices */
+            line-height: 1.5;
+            text-align: center;
+            /* Center align for better mobile readability */
+        }
+    }
+
+
     .tile {
         display: flex;
         flex-direction: column;
@@ -370,17 +419,14 @@
         margin: 1rem auto;
         padding: 1.5rem;
         border-radius: 20px;
-        /*  background-image: linear-gradient(#ffffff, #dcdcdc);*/
         background-image: linear-gradient(#c8b6b6 0%, #968888 50%, #c8b6b6 100%);
         word-wrap: break-word;
     }
-
 
     .tile:hover {
         transform: scale(1.05);
         transition: transform 0.3s ease-in-out;
     }
-
 
     .tile h2 {
         font-size: 2.5rem;
@@ -396,9 +442,8 @@
         font-weight: 400;
         line-height: 1.8;
         letter-spacing: 0.5px;
-        text-align: left;
+        text-align: center;
     }
-
 
     /*welcome section*/
 
@@ -411,7 +456,7 @@
         scroll-margin-top: 50px;
     }
 
-    .project-section-title {
+    .project-section-container {
         margin: 0 auto 6rem auto;
         background: linear-gradient(90deg, #45567db1, #be314467);
         padding: 1.5rem;
@@ -420,7 +465,7 @@
         color: var(--main-white);
     }
 
-    .project-section-title h2 {
+    .project-section-container h2 {
         font-size: 2.2rem;
         letter-spacing: 0.05em;
         display: flex;
@@ -429,12 +474,26 @@
         gap: 1rem;
     }
 
+    @media(max-width: 768px) {
+        .project-section-container {
+            margin: 0 auto 5rem auto;
+            padding: 1rem;
+            font-size: 1.4rem;
+            border-radius: 15px;
+        }
+
+        .project-section-container h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            line-height: 1.2;
+        }
+    }
+
     .projects-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        grid-gap: 2rem;
-        width: 100%;
-        max-width: 1280px;
+        grid-gap: 5rem;
+        width: 85%;
         margin: 0 auto;
     }
 
@@ -454,8 +513,6 @@
     .project img {
         width: 100%;
         height: auto;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
     }
 
     .project-title {
@@ -481,6 +538,29 @@
         .project {
             width: 90%;
             height: auto;
+            border-radius: 10px;
+        }
+
+        .project-title {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+        }
+    }
+
+
+    @media (max-width: 425px) {
+        .projects-section{
+            padding:2em;
+        }
+        .project {
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .project-title {
+            padding: 0.5rem;
+            font-size: 0.9rem;
         }
     }
 
@@ -528,9 +608,7 @@
         flex-wrap: wrap;
     }
 
-
-
-    .contact-button {
+   .contact-button {
         font-size: 2.4rem;
         text-shadow: 2px 2px 1px #1f1f1f;
         transition: transform 0.3s ease-out;
@@ -548,31 +626,39 @@
         border-radius: 2px;
     }
 
-    .fa,
-    .fab,
-    .fal,
-    .far,
-    .fas {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        line-height: 1;
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 4rem; 
+        height: auto; 
     }
 
-    .fab {
-        font-family: "Font Awesome 5 Brands";
+    .contact-container {
+        width: 80%; 
+        padding: 1.5rem;
+        border-radius: 20px;
     }
 
-    .fa-facebook-square:before {
-        content: "\f082";
+    .contact-section-title h2 {
+        font-size: 2rem; 
+        margin-bottom: 0.9rem; 
     }
+
+    .contact-button {
+        font-size: 1.5rem;
+        padding: 0.9rem; 
+    }
+}
+
+@media (max-width: 425px) {
+    .contact-section-title h2 {
+        font-size: 1.8rem; 
+    }
+}
+
 
     /*contact secction */
 
-    /*footer*/
+    /*footer
 
     footer {
         display: flex;
@@ -598,5 +684,5 @@
 
 
 
-    /*footer*/
+    footer*/
 </style>
