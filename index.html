@@ -50,9 +50,8 @@
             <p>
                 I am a bilingual (English and French) Web Developer with a strong foundation in languages and web
                 technologies. Currently pursuing a Bachelor's in Web Development at ISCOD while gaining practical
-                experience through work-study. My passion lies in creating dynamic web experiences and solving problems
-                through teamwork
-                and adaptability.
+                experience through work-study. My passion lies in creating dynamic web experiences and problem solving
+                through teamwork and adaptability.
             </p>
             <a href="My CV.pdf" target="_blank" class="btn download-cv-button">My French CV</a>
             <a href="My CV.pdf" target="_blank" class="btn download-cv-button">My English CV</a>
@@ -179,7 +178,85 @@
 </html>
 
 <style>
+    /*language css*/
+
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    a,
+    li,
+    span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    button,
+    a {
+        white-space: normal;
+        display: inline-block;
+        text-align: center;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .container,
+    .nav-list,
+    .projects-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .intro-content-left,
+    .intro-content-right {
+        flex: 1;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .contact-container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .contact-text {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #contact-form input,
+    #contact-form textarea,
+    .send-button {
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    /*language css*/
+
+
     /*html*/
+
 
     @media (max-width: 48em) {
         html {
