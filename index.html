@@ -205,6 +205,7 @@
         });
     </script>
 </body>
+
 </html>
 
 <style>
@@ -573,77 +574,81 @@
 
     /* More About Me Section */
     /* More About Me Section */
-.more-about-me {
-    padding: 4rem 2rem;
-    text-align: center;
-    background: ffffff;
-    color: #333;
-    scroll-margin-top:5em;
-}
+    .more-about-me {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: ffffff;
+        color: #333;
+        scroll-margin-top: 5em;
+    }
 
-.more-about-me h2 {
-    font-size: 2.5rem;
-    color: #45567d;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+    .more-about-me h2 {
+        font-size: 2.5rem;
+        color: #45567d;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-.about-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .about-item {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.about-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+    .about-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
-.about-icon {
-    font-size: 2.5rem;
-    color: #45567d;
-    margin-bottom: 1rem;
-}
+    .about-icon {
+        font-size: 2.5rem;
+        color: #45567d;
+        margin-bottom: 1rem;
+    }
 
-.about-item h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
+    .about-item h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+    }
 
-.about-item p,
-.about-item ul {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
+    .about-item p,
+    .about-item ul {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
 
-.about-item ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    .about-item ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.about-item ul li {
-    margin-bottom: 0.5rem;
-    color: #333;
-}
+    .about-item ul li {
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
 
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
     .more-about-me h2 {
         font-size: 2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Switch to column layout */
     }
 
     .about-item {
@@ -657,6 +662,10 @@
     .about-item p,
     .about-item ul {
         font-size: 0.9rem;
+    }
+
+    .about-icon {
+        font-size: 2rem; /* Adjust icon size for smaller screens */
     }
 }
     /*about me */
