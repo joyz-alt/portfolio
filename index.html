@@ -16,14 +16,14 @@
     <nav id="navbar" class="nav">
 
         <div class="logo">
-            <img src="images\logo no background.png" alt="Logo">
+            <a href="#"><img src="images\logo no background.png" alt="Logo"></a>
         </div>
 
         <div class="hamburger">
             <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-list">
-            <li><a href="#welcome-section"><i class="fas fa-info-circle"></i> about</a></li>
+            <li><a href="#more-about-me"><i class="fas fa-info-circle"></i> about</a></li>
             <li><a href="#projects-section"><i class="fas fa-project-diagram"></i> projects</a></li>
             <li><a href="#contact-section"><i class="fas fa-envelope"></i> contact</a></li>
         </ul>
@@ -63,8 +63,43 @@
         </div>
     </div>
 
+    <section id="more-about-me" class="more-about-me">
+        <h2>More About Me</h2>
+        <div class="about-grid">
+            <div class="about-item">
+                <i class="fas fa-user-graduate about-icon"></i>
+                <h4>Education</h4>
+                <p>Bachelor's in Web Development (ISCOD) - Currently in Progress</p>
+                <p>Bachelor's in Languages (University of La Rochelle)</p>
+            </div>
+            <div class="about-item">
+                <i class="fas fa-briefcase about-icon"></i>
+                <h4>Experience</h4>
+                <p>English Teacher (Remote, 2022–2024)</p>
+                <p>Admin Support at Real Estate Agency (2020–2021)</p>
+                <p>Restaurant Service and Delivery Roles</p>
+            </div>
+            <div class="about-item">
+                <i class="fas fa-laptop-code about-icon"></i>
+                <h4>Current Goals</h4>
+                <p>Spending my free time learning web development and coding.</p>
+                <p>Seeking an internship as a Web Developer near La Rochelle, France.</p>
+            </div>
+            <div class="about-item">
+                <i class="fas fa-tools about-icon"></i>
+                <h4>Skills</h4>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Problem-Solving & Team Collaboration</li>
+                    <li>Languages: English (Native), French (Native), Spanish (B1)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section id="projects-section" class="projects-section">
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-subtitle">Explore some of the work I've done, showcasing my skills in web development.</p>
         <div class="projects-grid">
 
             <a href="https://joyz-alt.github.io/palindrome-checker/" class="project" target="_blank">
@@ -168,17 +203,12 @@
                 e.stopPropagation();
             });
         });
-
-
     </script>
-
-
 </body>
-
 </html>
 
 <style>
-    /*language css*/
+    /*la    nguage css*/
 
     body,
     h1,
@@ -417,7 +447,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 90vh;
+        height: 100vh;
         background-color: #f9f9f9;
         position: relative;
         overflow: hidden;
@@ -538,7 +568,119 @@
     /*intro section*/
 
 
+    /*about me*/
+
+
+    /* More About Me Section */
+    /* More About Me Section */
+.more-about-me {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: ffffff;
+    color: #333;
+    scroll-margin-top:5em;
+}
+
+.more-about-me h2 {
+    font-size: 2.5rem;
+    color: #45567d;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-icon {
+    font-size: 2.5rem;
+    color: #45567d;
+    margin-bottom: 1rem;
+}
+
+.about-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-item p,
+.about-item ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-item ul li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .more-about-me h2 {
+        font-size: 2rem;
+    }
+
+    .about-item {
+        padding: 1rem;
+    }
+
+    .about-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .about-item p,
+    .about-item ul {
+        font-size: 0.9rem;
+    }
+}
+    /*about me */
+
     /*projects secction */
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        text-align: center;
+        color: #555;
+        margin-bottom: 2rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
     .projects-section {
         padding: 4rem 2rem;
         background: linear-gradient(#ffffff, #f7f7f7);
